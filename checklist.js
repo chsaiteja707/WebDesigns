@@ -1,23 +1,8 @@
 $("ul").on("click","li",function(){
 	$(this).toggleClass("completed");	
 });
-//without using .completed class in css file
-/*
-$("li").click(function(){
-	console.log($(this).css("color"));
-	if($(this).css("color")==="rgb(255, 0, 0)"){
-		$(this).css("color","black");
-		$(this).css("textDecoration","none");
-	}
-	else{
-		$(this).css({
-		color:"red",
-		textDecoration:"line-through"
-		});
-})
-	*/	
 
-$("span").click(function(event){
+$("ul").on("click","span",function(event){
 	event.stopPropagation();
 	$(this).parent().fadeOut(500,function(){
 		$(this).remove();
@@ -36,5 +21,5 @@ $("input[type='text']").keypress(function(event)
 })
 
 $(".fa-plus").click(function(){
-	$("input[type='text").fadeToggle();
+	$("input[type='text']").fadeToggle();
 })

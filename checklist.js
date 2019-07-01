@@ -1,6 +1,21 @@
 $("ul").on("click","li",function(){
 	$(this).toggleClass("completed");	
 });
+//without using .completed class in css file
+/*
+$("li").click(function(){
+	console.log($(this).css("color"));
+	if($(this).css("color")==="rgb(255, 0, 0)"){
+		$(this).css("color","black");
+		$(this).css("textDecoration","none");
+	}
+	else{
+		$(this).css({
+		color:"red",
+		textDecoration:"line-through"
+		});
+})
+	*/	
 
 $("ul").on("click","span",function(event){
 	event.stopPropagation();
